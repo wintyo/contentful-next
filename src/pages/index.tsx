@@ -1,8 +1,25 @@
+import { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
 
+import { IPost } from '../interfaces/Post';
 import styles from '../styles/Home.module.css';
+import ContentfulAPI from '../utils/ContentfulAPI';
 
-export default function Home() {
+interface IProps {
+  posts: Array<IPost>;
+}
+
+export const getStaticProps: GetStaticProps<IProps> = async () => {
+  const posts = await ContentfulAPI.getAllPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
+const Home: NextPage<IProps> = (props) => {
+  console.log(props);
   return (
     <div className={styles.container}>
       <Head>
@@ -56,4 +73,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+
+export default Home;
