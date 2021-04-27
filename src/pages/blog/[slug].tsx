@@ -4,9 +4,9 @@ import { NextPage, GetStaticProps } from 'next';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 
-import { IPost } from '../../interfaces/Post';
-// import styles from '../../styles/Blog.module.scss';
-import ContentfulAPI from '../../utils/ContentfulAPI';
+import { IPost } from '~/interfaces/Post';
+import ContentfulAPI from '~/utils/ContentfulAPI';
+// import styles from '~/styles/Blog.module.scss';
 
 interface IProps {
   post: IPost | null;

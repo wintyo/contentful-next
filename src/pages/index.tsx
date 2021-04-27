@@ -3,9 +3,9 @@ import { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import { IPost } from '../interfaces/Post';
-import styles from '../styles/Home.module.scss';
-import ContentfulAPI from '../utils/ContentfulAPI';
+import { IPost } from '~/interfaces/Post';
+import styles from '~/styles/Home.module.scss';
+import ContentfulAPI from '~/utils/ContentfulAPI';
 
 interface IProps {
   posts: Array<IPost>;
@@ -24,7 +24,7 @@ const Home: NextPage<IProps> = (props) => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
