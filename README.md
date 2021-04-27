@@ -1,3 +1,10 @@
+# ContentfulとNext.jsでブログを作る
+
+## 環境変数について
+ローカルで開発する場合は `.env.sample` を参考に適切な値を入れて `.env.local` ファイルを用意する。
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
